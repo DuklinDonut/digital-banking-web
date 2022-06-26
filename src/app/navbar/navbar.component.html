@@ -7,8 +7,92 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+
+      background-repeat: round;
+    }
+    h1 {
+      color: dimgray;
+    }
+    p {
+      color: #f9f9f9;
+      size: A5;
+    }
+    /* Navbar container */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      font-family: Arial;
+    }
+
+    /* Links inside the navbar */
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* The dropdown container */
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit; /* Important for vertical align on mobile phones */
+      margin: 0; /* Important for vertical align on mobile phones */
+    }
+
+    /* Add a red background color to navbar links on hover */
+    .navbar a:hover, .dropdown:hover .dropbtn {
+      background-color: darkseagreen;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
 </head>
 <body>
+
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -18,18 +102,25 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
 
+
       <li class="nav-item"><a class="nav-link" routerLink="/customers">Customers</a></li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/accounts"> Accounts</a>
-      </li>
+
       <li class="nav-item">
         <a class="nav-link" routerLink="/customers">searchCustomers</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/new-customer">New Customers</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/accounts"> Accounts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/new-account">New Account</a>
+      </li>
+      <li class="bi-menu-button">Logout</li>
 
-      <li class="nav-item dropdown">
+
+      <!--<li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
           Customer
         </a>
@@ -39,15 +130,27 @@
             <li><a class="dropdown-item" routerLink="/new-customers">New Customers</a></li>
             <li><a class="dropdown-item"></a></li>
         </ul>
-      </li>
-      <li><a href="#">Page 3</a></li>
+      </li>-->
+
+
     </ul>
   </div>
 </nav>
 
-<div class="container">
-  <h3>Welcome to Digital-Bank</h3>
-  <p>The ultimate e-banking website.</p>
+<div  class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white bi-border-width"
+      style="background-image: url(assets/images/money-bank-wallet-cash.jpg);"
+      class="container">
+  <h1>Welcome to Digital-Bank</h1>
+  <p>Sont considérés comme établissements de crédit les personnes
+  <p>  morales qui exercent leur activité au Maroc, quels que soient
+  <p>  le lieu de leur siège social, la nationalité des apporteurs de leur
+  <p>  capital social ou de leur dotation ou celle de leurs dirigeants et
+  <p>  qui exercent, à titre de profession habituelle, une ou plusieurs des
+  <p>  activités suivantes :
+  <p>  - la réception de fonds du public ;
+  <p>  - les opérations de crédit ;
+  <p>  - la mise à la disposition de la clientèle de tous moyens de
+  <p>  paiement, ou leur gestion.</p>
 </div>
 
 </body>

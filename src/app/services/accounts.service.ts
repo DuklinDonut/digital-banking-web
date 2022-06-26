@@ -11,6 +11,14 @@ export class AccountsService {
 
   constructor(private http : HttpClient) { }
 
+  public saveSavingAccount(balance : number,interest:number,customerId:number){
+    let data={balance : balance, interest : interest, customerId : customerId}
+    return this.http.post(environment.backendHost+"/customer-accounts/saveSavingAccount",data);
+  }
+  public saveCurrentAccount(balance : number,overdraft:number,customerId:number){
+    let data={balance : balance, overdraft : overdraft, customerId : customerId}
+    return this.http.post(environment.backendHost+"/customer-accounts/saveSavingAccount",data);
+  }
   public getAccount(accountId : string, page : number, size : number):Observable<AccountDetails>{
     return this.http.get<AccountDetails>(environment.backendHost+"/accounts/"+accountId+"/pageOperations?page="+page+"&size="+size);
   }
