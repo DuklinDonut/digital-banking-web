@@ -4,9 +4,9 @@
 
       <div class="card-header">Customers</div>
       <div class="card-body">
-        <div *ngIf="searchformGroup">
+        <div *ngIf="searchFormGroup">
 
-          <form [formGroup]="searchformGroup" (ngSubmit)="handleSearchCustomers()">
+          <form [formGroup]="searchFormGroup" (ngSubmit)="handleSearchCustomers()">
             <div class="input-group">
               <label class="input-group-text">Keyword :</label>
               <input type="text" formControlName="keyword" class="form-control">
